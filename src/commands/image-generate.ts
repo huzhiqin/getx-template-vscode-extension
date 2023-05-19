@@ -96,9 +96,13 @@ function imagesGen(targetDirectory: string) {
       }
     }
     // 写入列表
+    const imgPathDirArr: string[] = imgPath.dir.split('/');
+    let dirName = (path.basename(imgPathDirArr[imgPathDirArr.length - 2]) + '/');
+    // 删除 images/ 没有设计多层级的情况下需要处理
+    dirName = dirName.replace('images/','');
     appendFileSync(
       `${workDir}/files.txt`,
-      `static const ${changeCase.camelCase(imgPath.base)} = 'assets/images/${
+      `static const ${changeCase.camelCase(imgPath.base)} = 'assets/images/${dirName}${
         imgPath.base
       }';\r\n`,
       "utf8"

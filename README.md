@@ -1,4 +1,4 @@
-# GetX 项目代码生成工具
+# GetX 项目代码生成工具（额外修改files.txt生成多层级完整路径的方式）
 
 <a href="https://ducafecat.com" target="_blank">
   <img src="images/video-ducafecat-banner.png" alt="猫哥视频站" >
